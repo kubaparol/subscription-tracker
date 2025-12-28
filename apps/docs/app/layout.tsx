@@ -2,6 +2,7 @@ import '@repo/ui/styles.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
+import type { ReactNode, ReactElement } from 'react';
 
 const geist = Geist({ subsets: ['latin'] });
 
@@ -13,8 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
-}) {
+  children: ReactNode;
+}): ReactElement {
   return (
     <html lang="en">
       <body className={geist.className}>{children}</body>
